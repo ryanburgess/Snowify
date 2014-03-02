@@ -1,0 +1,222 @@
+header{
+	position:relative;
+	@include clearfix();
+	@include rem("margin-bottom", 30);
+	@include rem("padding-top", 30);
+
+	// Breakpoint in-between
+	@include breakpoint($inbetween){
+		@include rem("padding-top", 10);
+		border-bottom:1px solid $crRed;
+	}
+
+	h1{
+		@include rem("margin-bottom", 10);
+
+		// Breakpoint max width
+		@include breakpoint($maxWidth){
+			@include rem("padding-left", 10);
+		}
+
+		a{
+			display:block;
+			font-family:$webfont;
+			@include rem("font-size", 32);
+			@include hide-text();
+			background:url(../images/cr-logo.png) no-repeat;
+			@include retina("../images/cr-logo-hd.png", 300, 122);
+			text-decoration:none;
+			@include rem("width", 300);
+			@include rem("height", 122);
+
+			// Breakpoint tablet
+			@include breakpoint($tablet){
+				@include rem("width", 200);
+				@include rem("height", 81);
+				@include rem("background-size", 200, 81);
+			}
+
+			// Breakpoint in-between
+			@include breakpoint($inbetween){
+				@include rem("width", 100);
+				@include rem("height", 41);
+				@include rem("background-size", 100, 41);
+			}
+		}
+	}
+
+	// Skip to content link
+	a.main-content-link{
+		@include hide-text();
+		position:absolute;
+		@include rem("top", 10);
+		@include rem("left", 180);
+		text-decoration:none;
+	}
+	a.main-content-link:focus{
+		text-indent:0;
+		background:$darkRed;
+		color:white;
+		@include rem("padding", 5);
+	}
+
+	form.search{
+		position:absolute;
+		@include rem("right", 10);
+		@include rem("bottom", 80);
+
+		// Breakpoint in-between
+		@include breakpoint($inbetween){
+			display:none;
+			position:relative;
+			top:0;
+			left:0;
+			text-align:center;
+
+			fieldset{
+				border-top:1px solid $crRed;
+				background:$darkGrey;
+				@include rem("padding", 10);
+				margin:0 auto;
+			}
+			
+		}
+
+		legend{
+			@include hide-text();
+			padding:0;
+			margin:0;
+		}
+
+		label{
+			@include hide-text();
+		}
+
+		input{
+			@include linearGradient(white, $reallyLightGrey);
+			border:1px solid $lightGrey;
+			@include rem("padding", 5, 10);
+			@include rem("width", 160);
+			color:$darkGrey;
+
+			// Breakpoint in-between
+			@include breakpoint($inbetween){
+				width:60%;
+			}
+		}
+
+		button{
+			position:relative;
+			background:$crRed;
+			color:white;
+			border:1px solid $crRed;
+			@include rem("padding", 5, 10);
+			@include rem("margin", 0, 0, 0, -5);
+		}
+
+		button:after{
+			content:"";
+			position:absolute;
+			@include rem("top", 4);
+			@include rem("left", -8);
+			@include arrow("left", $crRed, 8);
+		}
+
+		button:hover, button:focus{
+			background:$darkRed;
+			border:1px solid $darkRed;
+		}
+
+		button:hover:after, button:focus:after{
+			@include arrow("left", $darkRed, 8);
+		}
+	}
+
+	nav#main-nav{
+		clear:both;
+		background:$crRed;
+		@include rem("margin-bottom", 20);
+		@include rem("font-size", 14);
+
+		// Breakpoint in-between
+		@include breakpoint($inbetween){
+			border-top:1px solid $crRed;
+			display:none;
+			margin-bottom:0;
+			background:$darkGrey;
+		}
+
+		ul{
+			margin:0;
+			@include rem("padding", 10, 0, 10, 0);
+
+			// Breakpoint in-between
+			@include breakpoint($inbetween){
+				padding:0;
+			}
+
+			li{
+				display:inline;
+				margin:0;
+
+				a{
+					text-decoration:none;
+					color:white;
+					@include rem("padding", 10, 20);
+					@include rem("letter-spacing", 1.5);
+
+					// Breakpoint in-between
+					@include breakpoint($inbetween){
+						display:block;
+					}
+				}
+				a:hover, a:focus{
+					background:$darkRed;
+				}
+			}
+
+
+		}
+	}
+
+	nav#menu{
+		display:none;
+		position:absolute;
+		top:0;
+		right:0;
+
+		//tablet breakpoint
+		@include breakpoint($inbetween){
+			display:block;
+		}
+
+		a{
+			border-left:1px solid $crRed;
+			@include rem("padding", 48, 20);
+			@include rem("height", 100);
+
+			span{
+				display:inline-block;
+				@include hide-text();
+				position:relative;
+				@include rem("top", 20);
+				background:url(images/menu-icons.png) no-repeat;
+				@include retina("images/menu-icons-hd.png", 75, 43);
+				@include rem("width", 22);
+				@include rem("height", 22);
+			}
+		}
+		a#search-link{
+			span{
+				@include rem("background-position", 0, -22);
+			}
+			
+		}
+
+		a#menu-link{
+			span{
+				background-position:0 0;
+			}
+		}
+	}
+}

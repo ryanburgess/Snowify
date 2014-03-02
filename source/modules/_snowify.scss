@@ -1,0 +1,85 @@
+$blueBG: #6bcbd4;
+body{
+	background:$blueBG;
+}
+body.white{
+	background:white;
+}
+.enter{
+	@include rem("padding", 30);
+	@include clearfix();
+	width:40%;
+	@include roundedCorners(5);
+	background:white;
+	margin:0 auto;
+	text-align:center;
+	@include rem("margin-top", 40);
+
+	h1{
+		font-family:$snowhouse;
+		@include rem("font-size", 32);
+		color:darken($blueBG, 20%);
+	}
+}
+iframe{
+	width:0;
+	height:0;
+}
+iframe.site{
+	/*border:none;
+	width:100%;
+	min-height:1100px;*/
+	overflow:hidden;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+.site, .enter{
+	display: none;
+}
+.error{
+	clear:both;
+	@include rem("margin", 0, 0, 0, 60);
+	display:block;
+	color:$crRed;
+}
+label{
+	@include rem("font-size", 14);
+	@include rem("margin", 5, 5, 0, 0);
+	color:darken($blueBG, 40%);
+	float:left;
+}
+
+input{
+	display:block;
+	width:60%;
+	@include rem("font-size", 14);
+	@include rem("pading", 5, 10);
+	float:left;
+}
+
+textarea{
+	display:block;
+	width:60%;
+	@include rem("height", 300);
+}
+
+button{
+	float:left;
+	border:none;
+	@include roundedCorners(5);
+	@include rem("margin", 3, 0, 0, 10);
+	@include rem("padding", 5, 20);
+	background:darken($blueBG, 20%);
+	color:white;
+}
+button:hover, button:focus{
+	background: lighten($blueBG, 10%);
+	color:darken($blueBG, 40%);
+}

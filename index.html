@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snowify</title>
+        <meta name="description" content="Snowify your website and share it with others." />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+        <!--[if IE]>
+            <script src="http://coderesponsible.com/wp-content/themes/cr-2013/js/html5.js"></script>
+        <![endif]-->
+    
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-35062160-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+    </head>
+    <body>
+        <div class="enter">
+            <h1>Snowify your website</h1>
+            <label for="url">URL:</label><input type="url" id="url"><button class="load">Snowify</button>
+            <p class="error"></p>
+        </div>
+    	<iframe class="site" src="" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+        <script src="js/snowfall.min.jquery.js" type="text/javascript"></script>
+        <script src="js/snowify-min.js" type="text/javascript"></script>
+   		
+    </body>
+</html>

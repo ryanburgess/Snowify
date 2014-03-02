@@ -1,0 +1,29 @@
+// -----------------------------------------
+	// Layout Sizes
+// -----------------------------------------
+$maxWidth: 1100;
+$tablet: 880;
+$inbetween: 600;
+$mobile: 480;
+
+// -----------------------------------------
+	// color variables
+// -------------------------------------------
+$crRed: #ce2833;
+$darkRed: #710109;
+$lightRed: lighten($crRed, 30%);
+$lightGrey: #cccccc;
+$reallyLightGrey: #efefef;
+$darkGrey: #24262A;
+
+// -----------------------------------------
+	// Fonts
+// -------------------------------------------
+$helvetica: Helvetica, Arial, sans-serif;
+$webfont: 'helveticaneuelt_stdbold', Helvetica, Arial, sans-serif;
+$snowhouse: 'snowhouse', Helvetica, Arial, sans-serif;
+
+// -----------------------------------------
+	// Font Sizes
+// -------------------------------------------
+$regularSize:12;

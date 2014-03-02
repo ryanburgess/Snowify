@@ -1,0 +1,12 @@
+a.main-content-link{
+	display:block;
+	@include hide-text();
+	height:1px;
+}
+a.main-content-link:focus{
+	height:auto;
+	text-indent:0;
+	background:$crRed;
+	color:#ffffff;
+	text-align:center;
+}

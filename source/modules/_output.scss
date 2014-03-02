@@ -1,0 +1,14 @@
+.output{
+	display:none;
+	label{
+		@include rem("font-size", 14);
+		@include rem("margin-bottom", 5);
+		display:block;
+	}
+
+	textarea{
+		display:block;
+		width:60%;
+		@include rem("height", 300);
+	}
+}
